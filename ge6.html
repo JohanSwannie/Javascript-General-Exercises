@@ -36,18 +36,20 @@
 
       if (action === "first") {
         console.log(
-          `name : ${contacts[0].name} / phone : ${contacts[0].phone} / email : ${contacts[0].email}`
+          `FIRST RECORD ---> name : ${contacts[0].name} / phone : ${contacts[0].phone} / email : ${contacts[0].email}`
         );
       }
 
       if (action === "last") {
         let lIdx = contacts.length - 1;
         console.log(
-          `name : ${contacts[lIdx].name} / phone : ${contacts[lIdx].phone} / email : ${contacts[lIdx].email}`
+          `LAST RECORD ---> name : ${contacts[lIdx].name} / phone : ${contacts[lIdx].phone} / email : ${contacts[lIdx].email}`
         );
       }
 
       if (action === "all") {
+        console.log("ALL RECORDS");
+        console.log("-----------");
         for (person of contacts) {
           console.log(
             `name : ${person.name} / phone : ${person.phone} / email : ${person.email}`
@@ -83,6 +85,8 @@
           email: addEmail,
         };
         contacts.push(newContact);
+        console.log("NEW RECORD ADDED");
+        console.log("----------------");
       }
     }
 
