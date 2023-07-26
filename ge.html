@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>General Exercises</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        background-color: rgba(120, 184, 236, 0.4);
+      }
+
+      h1 {
+        text-align: center;
+      }
+
+      p {
+        width: 80vw;
+        margin-left: 10vw;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>General Exercises</h1>
+    <p id="p1"></p>
+    <p id="p2"></p>
+    <p id="p3"></p>
+    <p id="p4"></p>
+    <p id="p5"></p>
+    <p id="p6"></p>
+    <p id="p7"></p>
+    <p id="p8"></p>
+    <p id="p9"></p>
+    <p id="p10"></p>
+  </body>
+  <script>
+    let firstNumber = Number(prompt("Enter first number"));
+    let secondNumber = Number(prompt("Enter second number"));
+    let operand = prompt("Enter operand (+, -, * or /)");
+    let result;
+
+    if (!Number.isNaN(firstNumber) && !Number.isNaN(secondNumber)) {
+      switch (operand) {
+        case "+":
+          result = firstNumber + secondNumber;
+          break;
+        case "-":
+          result = firstNumber - secondNumber;
+          break;
+        case "*":
+          result = firstNumber * secondNumber;
+          break;
+        case "/":
+          result = firstNumber / secondNumber;
+          break;
+        default:
+          result = "Error: unknown operand";
+      }
+    } else {
+      result = "Error: at least one of the entered values is not a number";
+    }
+    alert(result);
+  </script>
+</html>
