@@ -13,6 +13,10 @@
       let operand = prompt("Enter operand (+, -, * or /)");
       let result;
 
+      if (!firstNumber || !secondNumber || !operand) {
+        break;
+      }
+
       if (firstNumber === "Q" || secondNumber === "Q" || operand === "Q") {
         break;
       }
