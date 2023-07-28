@@ -163,8 +163,8 @@ console.log(add3(10, 20));
 //Functions - Example 14 - Functions using forEach
 
 let names = ["Alice", "Eve", "John", "Luke", "Mark"];
-function showName(element) {
-  console.log(element);
+function showName(item) {
+  console.log(item);
 }
 names.forEach(showName);
 
