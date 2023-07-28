@@ -170,7 +170,7 @@ names.forEach(showName);
 
 //Functions - Exercise 1 - sorting the long way
 
-let numbers = [50, 10, 40, 30, 20];
+let numbers = [100, 5, 80, 55, 70, 50, 10, 40, 30, 20];
 
 function compareNumbers(a, b) {
   let retVal = 0;
@@ -181,9 +181,7 @@ function compareNumbers(a, b) {
   }
   return retVal;
 }
-let sorted = numbers.sort(compareNumbers);
-
-console.log(sorted); // [10, 20, 30, 40, 50]
+console.log(`The numbers sorted are now : ${numbers.sort(compareNumbers)}`);
 
 //Functions - Exercise 2 - Sorting the short way
 
