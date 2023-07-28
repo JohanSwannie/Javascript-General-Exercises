@@ -13,7 +13,7 @@ function getMeanTemp(temperatures) {
 console.log(getMeanTemp(10));
 console.log(getMeanTemp([10, 30]));
 
-//Function - Example 2 - Factorials
+//Function - Example 2 - Factorials - Iteration Way
 
 function factorial(n) {
   let result = 1;
@@ -25,7 +25,7 @@ function factorial(n) {
 }
 console.log(factorial(7));
 
-//Function - Example 3 - Factorials with ternary statement
+//Function - Example 3 - Factorials with ternary statement - Recursion way
 
 function factorial2(n) {
   return n > 1 ? n * factorial2(n - 1) : 1;
