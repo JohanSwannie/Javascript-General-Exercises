@@ -73,7 +73,7 @@ console.log(add(10, 20)); // -> 30
 
 //Functions - Example 7 - Function Expressions
 
-let myAdd2 = add(a, b) => {
+let myAdd2 = function add(a, b) {
   return a + b;
 };
 console.log(add(10, 20)); // -> 30
