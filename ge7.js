@@ -123,7 +123,7 @@ let outer2 = function (callback2) {
   console.log("outer2 2");
 };
 console.log("test2 1");
-outer(inner2);
+outer2(inner2);
 console.log("test2 2");
 
 //Functions - Example 11 - setTimeout & setInterval Functions
@@ -131,16 +131,21 @@ console.log("test2 2");
 let inner3 = function () {
   console.log("inner3 1");
 };
-let outer3 = function (callback) {
+let outer3 = function (callback3) {
   console.log("outer3 1");
-  let timerId = setInterval(callback, 19000); /*ms*/
-  console.log("outer3 2");
+  let counter = 1;
+  let timerId = setInterval(() => {
+    console.log(`outer3 2 with counter : ${counter}`);
+    counter++;
+    callback3;
+  }, 2000);
   setTimeout(() => {
+    console.log("TIMER ID INTERVAL HAS BEEN CANCELLED");
     clearInterval(timerId);
-  }, 5500);
+  }, 10000);
 };
 console.log("test3 1");
-outer(inner3);
+outer3(inner3);
 console.log("test3 2");
 
 //Functions - Example 12 - Arrow Functions
