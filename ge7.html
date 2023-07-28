@@ -64,5 +64,14 @@
     }
     console.log(operation(add, 10, 20)); // -> 30
     console.log(operation(multiply, 10, 20)); // -> 200
+
+    //Functions - Example 6 - Function Expressions
+
+    function add(a, b) {
+      return a + b;
+    }
+    let myAdd = add;
+    console.log(myAdd(10, 20)); // -> 30
+    console.log(add(10, 20)); // -> 30
   </script>
 </html>
