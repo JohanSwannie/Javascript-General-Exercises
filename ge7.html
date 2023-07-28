@@ -7,7 +7,46 @@
   </head>
   <body></body>
   <script>
-    let steps = [3, 2, 1];
-    for (let n of steps) console.log(n);
+    //Function - Example 1
+
+    function getMeanTemp(temperatures) {
+      if (!(temperatures instanceof Array)) {
+        return NaN;
+      }
+      let sum = 0;
+      for (let i = 0; i < temperatures.length; i++) {
+        sum += temperatures[i];
+      }
+      return sum / temperatures.length;
+    }
+    console.log(getMeanTemp(10));
+    console.log(getMeanTemp([10, 30]));
+
+    //Function - Example 2 - Factorials
+
+    function factorial(n) {
+      let result = 1;
+      while (n > 1) {
+        result *= n;
+        n--;
+      }
+      return result;
+    }
+    console.log(factorial(7));
+
+    //Function - Example 3 - Factorials with ternary statement
+    function factorial(n) {
+      return n > 1 ? n * factorial(n - 1) : 1;
+    }
+    console.log(factorial(7));
+
+    //Function - Example 4 - Functions as firstclass members
+    function doNothing() {
+      return undefined;
+    }
+    let a = doNothing(); // assign result of function call
+    let b = doNothing; // assign a function
+    console.log(typeof a); // -> undefined
+    console.log(typeof b); // -> function
   </script>
 </html>
