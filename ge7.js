@@ -193,10 +193,29 @@ console.log(compareNumbers2(numbers2)); // [10, 20, 30, 40, 50]
 
 //Functions - Exercise 3 - Sorting the shortest way
 
-let numbers3 = [50, 10, 40, 30, 20];
-console.log(`${numbers3.sort((a, b) => a - b)}`);
+let numbers3 = [88, 50, 10, 77, 40, 15, 30, 20];
+console.log(
+  `Numbers sorted the shortest way : ${numbers3.sort((a, b) => a - b)}`
+);
 
-//Functions - Exercise 4 - Callback Functions
+//Functions - Exercise 4 - more examples
+
+let addition = (a, b) =>
+  !Number.isInteger(a) || !Number.isInteger(b) ? NaN : a + b;
+
+console.log(`Addition Result is : ${addition(14, 33)}`);
+
+let subtraction = (a, b) =>
+  !Number.isInteger(a) || !Number.isInteger(b) ? NaN : a - b;
+
+console.log(`Subtraction Result is : ${subtraction(93, 14)}`);
+
+let multiplication = (a, b) =>
+  !Number.isInteger(a) || !Number.isInteger(b) ? NaN : a * b;
+
+console.log(`Multiplication Result is : ${multiplication(16, 17)}`);
+
+//Functions - Exercise 5 - Callback Functions
 
 let action = (callback, a, b) => callback(a, b);
 // or
@@ -208,7 +227,7 @@ function action3(callback, a, b) {
   return callback(a, b);
 }
 
-//Functions - Exercise 5 - setInterval, setTimeout, clearInterval
+//Functions - Exercise 6 - setInterval, setTimeout, clearInterval
 
 let counter = 1;
 let intervalId = setInterval(() => {
