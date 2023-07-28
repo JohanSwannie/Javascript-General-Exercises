@@ -93,8 +93,8 @@ console.log(
     function (a, b) {
       return a * b;
     },
-    10,
-    20
+    12,
+    9
   )
 ); // -> 200
 
@@ -135,7 +135,7 @@ let outer3 = function (callback) {
   console.log("outer3 1");
   let timerId = setInterval(callback, 19000); /*ms*/
   console.log("outer3 2");
-  setTimeout(function () {
+  setTimeout(() => {
     clearInterval(timerId);
   }, 5500);
 };
