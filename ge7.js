@@ -240,18 +240,18 @@ setTimeout(() => {
 
 //Functions - Exercise 7 - Fibonnaci Sequences - long Method
 
-let fibbRec = function (n) {
-  let retVal = 0;
+let fibbSequence = function (n) {
+  let retFibVal = 0;
   if (n != 0) {
     if (n === 1) {
-      retVal = 1;
+      retFibVal = 1;
     } else {
-      retVal = fibbRec(n - 1) + fibbRec(n - 2);
+      retFibVal = fibbSequence(n - 1) + fibbSequence(n - 2);
     }
   }
-  return retVal;
+  return retFibVal;
 };
 
-console.log(fibbRec(9));
+console.log(`Fibonnaci Sequence the longer way : ${fibbSequence(9)}`);
 
 //Functions - Exercise 7 - Fibonnaci Sequences - shorter Method
