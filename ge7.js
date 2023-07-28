@@ -269,11 +269,13 @@ let fibSequence1 = function (n) {
   return retFibVal;
 };
 
-console.log(`Fibonnaci Sequence the longer way : ${fibSequence1(9)}`);
+console.log(
+  `Fibonnaci Sequence(Recursion) the longer way : ${fibSequence1(9)}`
+);
 
 //Functions - Exercise 9 - Fibonnaci Sequences - shorter Method - Recursion
 
 let fibSequence2 = (n) =>
   n === 0 ? n : n === 1 ? 1 : fibSequence2(n - 1) + fibSequence2(n - 2);
 
-console.log(`Fibonnaci Sequence the short way : ${fibSequence2(9)}`);
+console.log(`Fibonnaci Sequence(Recursion) the short way : ${fibSequence2(9)}`);
