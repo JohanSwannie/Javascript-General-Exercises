@@ -87,10 +87,10 @@
     function operation(func, first, second) {
       return func(first, second);
     }
-    let myAdd = function (a, b) {
+    let myAdd3 = function (a, b) {
       return a + b;
     };
-    console.log(operation(myAdd, 10, 20)); // -> 30
+    console.log(operation(myAdd3, 10, 20)); // -> 30
     console.log(
       operation(
         function (a, b) {
@@ -100,5 +100,70 @@
         20
       )
     ); // -> 200
+
+    //Functions - Example 9 - Synchronous Callback
+
+    let inner = function () {
+      console.log("inner 1");
+    };
+    let outer = function (callback) {
+      console.log("outer 1");
+      callback();
+      console.log("outer 2");
+    };
+    console.log("test 1");
+    outer(inner);
+    console.log("test 2");
+
+    //Functions - Example 10 - Asynchronous Callback
+
+    let inner2 = function () {
+      console.log("inner2 1");
+    };
+    let outer2 = function (callback2) {
+      console.log("outer2 1");
+      setTimeout(callback2, 7000);
+      console.log("outer2 2");
+    };
+    console.log("test2 1");
+    outer(inner2);
+    console.log("test2 2");
+
+    //Functions - Example 11 - setTimeout & setInterval Functions
+
+    let inner3 = function () {
+      console.log("inner3 1");
+    };
+    let outer3 = function (callback) {
+      console.log("outer3 1");
+      let timerId = setInterval(callback, 19000); /*ms*/
+      console.log("outer3 2");
+      setTimeout(function () {
+        clearInterval(timerId);
+      }, 5500);
+    };
+    console.log("test3 1");
+    outer(inner3);
+    console.log("test3 2");
+
+    //Functions - Example 12 - Arrow Functions
+
+    let add = (a, b) => {
+      return a + b;
+    };
+    console.log(add(10, 20));
+
+    //Functions - Example 13 - Arrow Functions
+
+    let add = (a, b) => a + b;
+    console.log(add(10, 20));
+
+    //Functions - Example 14 - Functions using forEach
+
+    let names = ["Alice", "Eve", "John", "Luke", "Mark"];
+    function showName(element) {
+      console.log(element);
+    }
+    names.forEach(showName);
   </script>
 </html>
