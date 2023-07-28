@@ -238,7 +238,24 @@ setTimeout(() => {
   clearInterval(intervalId);
 }, 20000);
 
-//Functions - Exercise 7 - Fibonnaci Sequences - long Method
+//Functions - Exercise 8 - Fibonnaci Sequences - Iteration Method
+
+function fibIteration(n) {
+  let a = 0,
+    b = 1;
+  for (let i = 2; i <= n; i++) {
+    let c = a;
+    a = b;
+    b += c;
+  }
+  return b;
+}
+
+console.log(
+  `Fibonnaci Sequence(Iteration) the longer way : ${fibIteration(9)}`
+);
+
+//Functions - Exercise 8 - Fibonnaci Sequences - long Method - Recursion
 
 let fibSequence1 = function (n) {
   let retFibVal = 0;
@@ -254,7 +271,7 @@ let fibSequence1 = function (n) {
 
 console.log(`Fibonnaci Sequence the longer way : ${fibSequence1(9)}`);
 
-//Functions - Exercise 7 - Fibonnaci Sequences - shorter Method
+//Functions - Exercise 9 - Fibonnaci Sequences - shorter Method - Recursion
 
 let fibSequence2 = (n) =>
   n === 0 ? n : n === 1 ? 1 : fibSequence2(n - 1) + fibSequence2(n - 2);
