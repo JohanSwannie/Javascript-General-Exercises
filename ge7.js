@@ -27,10 +27,16 @@ console.log(factorial(7));
 
 //Function - Example 3 - Factorials with ternary statement
 
-function factorial(n) {
-  return n > 1 ? n * factorial(n - 1) : 1;
+function factorial2(n) {
+  return n > 1 ? n * factorial2(n - 1) : 1;
 }
-console.log(factorial(7));
+console.log(factorial2(7));
+
+//Function - Example 3b - Factorials with ternary statement
+
+const factorial3 = (n) => (n > 1 ? n * factorial3(n - 1) : 1);
+
+console.log(factorial3(7));
 
 //Function - Example 4 - Functions as firstclass members
 
@@ -189,11 +195,11 @@ console.log(`${numbers3.sort((a, b) => a - b)}`);
 
 let action = (callback, a, b) => callback(a, b);
 // or
-let action = function (callback, a, b) {
+let action2 = function (callback, a, b) {
   return callback(a, b);
 };
 // or
-function action(callback, a, b) {
+function action3(callback, a, b) {
   return callback(a, b);
 }
 
