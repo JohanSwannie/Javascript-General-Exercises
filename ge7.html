@@ -35,12 +35,14 @@
     console.log(factorial(7));
 
     //Function - Example 3 - Factorials with ternary statement
+
     function factorial(n) {
       return n > 1 ? n * factorial(n - 1) : 1;
     }
     console.log(factorial(7));
 
     //Function - Example 4 - Functions as firstclass members
+
     function doNothing() {
       return undefined;
     }
@@ -48,5 +50,19 @@
     let b = doNothing; // assign a function
     console.log(typeof a); // -> undefined
     console.log(typeof b); // -> function
+
+    //Function - Example 5 - Functions as firstclass members
+
+    function add(a, b) {
+      return a + b;
+    }
+    function multiply(a, b) {
+      return a * b;
+    }
+    function operation(func, first, second) {
+      return func(first, second);
+    }
+    console.log(operation(add, 10, 20)); // -> 30
+    console.log(operation(multiply, 10, 20)); // -> 200
   </script>
 </html>
