@@ -166,7 +166,7 @@
     }
     names.forEach(showName);
 
-    //Functions - Exercise 1
+    //Functions - Exercise 1 - sorting the long way
 
     let numbers = [50, 10, 40, 30, 20];
     function compareNumbers(a, b) {
@@ -180,5 +180,18 @@
     }
     let sorted = numbers.sort(compareNumbers);
     console.log(sorted); // [10, 20, 30, 40, 50]
+
+    //Functions - Exercise 2 - Sorting the short way
+
+    let numbers2 = [50, 10, 40, 30, 20];
+    const compareNumbers2 = (numbers2) => {
+      return numbers2.sort((a, b) => a - b);
+    };
+    console.log(compareNumbers2(numbers2)); // [10, 20, 30, 40, 50]
+
+    //Functions - Exercise 2 - Sorting the shortest way
+
+    let numbers3 = [50, 10, 40, 30, 20];
+    console.log(`${numbers3.sort((a, b) => a - b)}`);
   </script>
 </html>
