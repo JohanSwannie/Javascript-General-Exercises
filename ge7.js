@@ -242,9 +242,10 @@ setTimeout(() => {
 
 function fibIteration(n) {
   let a = 0,
-    b = 1;
+    b = 1,
+    c = 0;
   for (let i = 2; i <= n; i++) {
-    let c = a;
+    c = a;
     a = b;
     b += c;
   }
@@ -252,7 +253,7 @@ function fibIteration(n) {
 }
 
 console.log(
-  `Fibonnaci Sequence(Iteration) the longer way : ${fibIteration(9)}`
+  `Fibonnaci Sequence(Iteration) the longer way : ${fibIteration(3)}`
 );
 
 //Functions - Exercise 8 - Fibonnaci Sequences - long Method - Recursion
@@ -270,7 +271,7 @@ let fibSequence1 = function (n) {
 };
 
 console.log(
-  `Fibonnaci Sequence(Recursion) the longer way : ${fibSequence1(9)}`
+  `Fibonnaci Sequence(Recursion) the longer way : ${fibSequence1(4)}`
 );
 
 //Functions - Exercise 9 - Fibonnaci Sequences - shorter Method - Recursion
