@@ -7,7 +7,9 @@ function inner() {
   let name = "inner";
   return "Hello !";
 }
+console.time();
 console.log("before outer() call");
-// debugger;
+debugger;
 console.log(outer());
 console.log("after outer() call");
+console.timeEnd();
