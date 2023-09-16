@@ -23,4 +23,5 @@ if (!Number.isNaN(firstNumber) && !Number.isNaN(secondNumber)) {
 } else {
   result = "Error: at least one of the entered values is not a number";
 }
+
 alert(result);
