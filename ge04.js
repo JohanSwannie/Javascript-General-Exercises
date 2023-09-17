@@ -61,11 +61,12 @@ for (number of numbers) {
 }
 
 let movies = [];
+
 while (true) {
   let title = prompt("Enter movie title");
   let rating = prompt("Enter movie rating (imdb)");
 
-  if (title === null || rating === null) {
+  if (title == null || rating == null) {
     break;
   } else {
     movies.push({
@@ -76,17 +77,15 @@ while (true) {
 }
 
 console.log("All with ratings under 7:");
-for (movie of movies) {
+for (let movie of movies) {
   if (movie.rating < 7) {
     console.log(`${movie.title} (${movie.rating})`);
   }
 }
 
 console.log("All with ratings over 7:");
-for (movie of movies) {
+for (let movie of movies) {
   if (movie.rating >= 7) {
     console.log(`${movie.title} (${movie.rating})`);
-    break;
   }
 }
-const quessy = prompt("what is the movie name");
