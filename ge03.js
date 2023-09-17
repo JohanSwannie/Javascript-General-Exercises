@@ -1,16 +1,24 @@
 let isOver = false;
-while (isOver !== true) {
-  let combination = "";
-  let randy = Math.floor(Math.random() * 40);
+let numArray = [];
+
+while (!isOver) {
+  randy = Math.floor(Math.random() * 40) + 1;
+  if (!numArray.includes(randy)) {
+    numArray.push(randy);
+  }
   let continueLoop = confirm(
-    `Your Random Lotto Number is : ${randy} - Continue the loop?`
+    `Valid random number added if no duplicates was found - Continue the loop?`
   );
   isOver = continueLoop === true ? false : true;
 }
 
 alert(
-  "You reached the end of your random number search! - Click Restart to search for numbers again"
+  "You reached the end of your random number search! See your list of numbers below"
 );
+
+document.getElementById(
+  "numberList"
+).innerHTML = `Your number list = ${numArray}`;
 
 const butter = document.getElementById("butty");
 
