@@ -1,14 +1,19 @@
 while (true) {
-  let firstNumber = prompt("Enter first number");
-  let secondNumber = prompt("Enter second number");
-  let operand = prompt("Enter operand (+, -, * or /)");
+  let firstNumber = prompt("Enter first number OR enter 'Quit' to quit");
+  if ((firstNumber === "Quit") | (firstNumber === "quit")) {
+    break;
+  }
+  let secondNumber = prompt("Enter second number OR enter 'Quit' to quit");
+  if ((secondNumber === "Quit") | (firstNumber === "quit")) {
+    break;
+  }
+  let operand = prompt("Enter operand (+, -, * or /) OR enter 'Quit' to quit");
+  if ((operand === "Quit") | (firstNumber === "quit")) {
+    break;
+  }
   let result;
 
   if (!firstNumber || !secondNumber || !operand) {
-    break;
-  }
-
-  if (firstNumber === "Q" || secondNumber === "Q" || operand === "Q") {
     break;
   }
 
@@ -35,5 +40,5 @@ while (true) {
   } else {
     result = "Error: at least one of the entered values is not a number";
   }
-  alert(result);
+  alert(`The result of your calculation is ${result}`);
 }
