@@ -21,7 +21,7 @@ while (true) {
     `Choose action ("first" to display the first contact, "last" to display the last contact, "all" to display all contacts, "new" to add a new contact or "quit" to exit the program)`
   );
 
-  if (action === "quit") {
+  if ((action === "quit") | (action === "Quit")) {
     break;
   }
 
@@ -41,7 +41,7 @@ while (true) {
   if (action === "all") {
     console.log("ALL RECORDS");
     console.log("-----------");
-    for (person of contacts) {
+    for (let person of contacts) {
       console.log(
         `name : ${person.name} / phone : ${person.phone} / email : ${person.email}`
       );
